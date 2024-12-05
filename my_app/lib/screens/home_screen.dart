@@ -48,7 +48,59 @@ class HomeScreen extends StatelessWidget {
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                 child: Container(
-                  color: Colors.black.withOpacity(0.1), // Slight transparency for blur effect
+                  color: Colors.black.withOpacity(0.1),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      ' 📍Mumbai',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Good Morning',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Image.asset(
+                      'assets/1.png',
+                      height: 200,
+                      width: 200,
+                      fit: BoxFit.contain,
+                    ),
+                    const Center(
+                      child: Text(
+                        '3°C',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 55,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                     const Center(
+                      child: Text(
+                        'Cold',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -58,3 +110,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

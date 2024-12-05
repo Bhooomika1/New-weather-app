@@ -1,11 +1,11 @@
 name: my_app
 description: "A new Flutter project."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.d
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.4
+  sdk: ">=2.19.0 <4.0.0" # Adjusted to ensure compatibility with the Flutter and Dart SDK version
 
 dependencies:
   flutter:
@@ -14,7 +14,6 @@ dependencies:
   weather: ^3.1.1
   intl: ^0.18.1
   equatable: ^2.0.5
-  
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
@@ -25,4 +24,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
- 
+  assets:
+    - assets/
