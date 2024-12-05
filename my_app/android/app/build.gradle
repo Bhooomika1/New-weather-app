@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace 'com.example.my_app'  // Your app's namespace
+
+    compileSdkVersion 34  // Specify the compile SDK version here
+
+    defaultConfig {
+        applicationId "com.example.my_app"  // Set your application ID here
+        minSdkVersion 21  // Minimum SDK version your app supports
+        targetSdkVersion 34  // Target SDK version for the app
+        
+        // Manually set versionCode and versionName
+        versionCode 1  // You can set a version code, increment it for each release
+        versionName "1.0.0"  // You can set a version name, modify it as needed
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug  // Default for development; configure your signingConfig for production
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'  // Kotlin compatibility with Java 8
+    }
+}
+
+// Remove any references to flutterVersionCode and flutterVersionName
