@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      ' 📍Mumbai',
+                      ' 📍Paris',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w300,

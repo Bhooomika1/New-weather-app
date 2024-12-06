@@ -1,28 +1,30 @@
 name: my_app
 description: "A new Flutter project."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'  # Remove this line if you want to publish your app to pub.dev.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.0 <4.0.0" # Adjusted to ensure compatibility with the Flutter and Dart SDK version
+  sdk: ">=2.19.0 <4.0.0"  # Ensure this matches your Flutter and Dart SDK versions.
 
 dependencies:
   flutter:
     sdk: flutter
-  geolocator: ^10.0.1
-  weather: ^3.1.1
-  intl: ^0.18.1
-  equatable: ^2.0.5
-  cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.0.0  # Add this line to explicitly include flutter_bloc
+  bloc: ^8.0.0
+  equatable: ^2.0.5  # Ensure this version is compatible with your Dart/Flutter setup.
+  geolocator: ^13.0.2  # This package is used for obtaining location data.
+  weather: ^3.1.1  # Weather API package for fetching weather data.
+  intl: ^0.20.1  # Internationalization support.
+  cupertino_icons: ^1.0.8  # Cupertino icons for iOS-style widgets.
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0  # Lints for Flutter projects to enforce best practices.
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true  # Enables Material Design icons and widgets.
 
   assets:
-    - assets/
+    - assets/  # Ensure you have assets in this directory if you want to use images or other assets.

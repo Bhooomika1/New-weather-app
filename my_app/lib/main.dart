@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart'; // Corrected import
-import 'models/weather.dart';  // Import Weather class
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'screens/home_screen.dart'; // Import HomeScreen.
+import 'models/weather.dart'; // Import Weather class.
+import 'bloc/weather_bloc.dart'; // Import the WeatherBloc.
 
+// Main function to run the app.
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,12 +14,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Create an instance of Weather
-    final weather = Weather(description: 'Sunny', temperature: 30.0);
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: BlocProvider(
+        create: (_) => WeatherBloc(), // Provide the WeatherBloc to the widget tree
+        child: HomeScreen(),
+      ),
     );
   }
 }
+// the major verison odf th outsdtand anf latest  and the major odsjhgnb the hight sof gu hte 

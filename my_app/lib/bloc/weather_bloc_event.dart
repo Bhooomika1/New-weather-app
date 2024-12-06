@@ -1,11 +1,11 @@
-import 'package:equatable/equatable.dart';
+part of 'weather_bloc_bloc.dart'; // Correctly links to the main library file.
 
-abstract class WeatherBlocEvent extends Equatable {
+abstract class WeatherBlocEvent {
   const WeatherBlocEvent();
-
-  @override
-  List<Object> get props => [];
 }
 
-// Fixed typo in "FetchWeather" class
-class FetchWeather extends WeatherBlocEvent {}
+class FetchWeather extends WeatherBlocEvent {
+  final String city; // Added a city property to make this event meaningful.
+
+  const FetchWeather(this.city);
+}
